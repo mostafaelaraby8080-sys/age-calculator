@@ -1,0 +1,136 @@
+:root {
+  --color-bg: #f0f0f0;
+  --color-purple: #864cff;
+  --color-light-gray: #dbdbdbff;
+  --color-gray: #8a8a8a;
+  --color-black: #151515;
+  --color-white: #ffffff;
+  --color-red: #ff5757ff;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+    font-family: 'poppins', sans-serif;
+    display:flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content:center;
+    background: rgb(17, 184, 187);
+    background: radial-gradient(circle,rgb(17, 184, 187)0%,rgba(148,187,233,1));
+}
+
+.card{
+    width: 40%;
+    max-width: 100%;
+    margin: 0 10px;
+    padding: 70px;
+    background: var(--color-bg);
+    border-radius:20px;
+    box-shadow: 0 0 5px rgba(0,0,0,.22);
+
+}
+
+.card__form {
+    display: flex;
+    gap:15px
+}
+
+.card__inputContainer {
+    flex:1;
+}
+
+.card__label {
+    display: block;
+    font-weight: var(--font-weigth-bold);
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: var(gray);
+    margin-bottom: 5px;
+}
+
+.card__input {
+    padding:10px;
+    border:1px solid var(--color-bg);
+    border-radius:5px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    outline:none;
+    transition: all 0.3s;
+}
+
+.card__input:focus {
+    border-color:var(--color-purple);
+}
+
+.card__input--error {
+    border-color: red;
+}
+
+.card__errorMessage {
+    display: block;
+    font-size: 15px;
+    font-style: italic;
+    color: cornflowerblue;
+    margin-top: 5px;
+    font-weight: var(--font-weigth-bold);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card__input--error + .card__errorMessage{
+    opacity: 1;
+    visibility: visible;
+}
+
+.card__sparator {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.card__sparator:before {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: rgb(212, 192, 192);
+     
+}
+
+.card__button {
+    padding: 10px 20px;
+    border:none;
+    border-radius:4px;
+    background-color:  var(--color-purple);
+    color: #f0f0f0;
+    font-size: 18px;
+    font-weight:var(--font-weight-bold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1;
+
+   
+}
+
+.card__result {
+    font-size: 35px;
+    font-weight: var(--font-weight-bold);
+    font-style: italic;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom:0px;
+}
+ 
+.card__resultValue{
+    font-size: 36px;
+    color: var(--color-purple);  
+}
